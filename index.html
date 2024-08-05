@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrokontrolle Hemmerling</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Logo</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Dienste</a></li>
+                <li><a href="#">Über uns</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- Main Content -->
+    <div class="glow"></div>
+    <div class="maincontent">
+       <h1>Elektrokontrolle <h1 class="gradient-text"> Hemmerling</h1> </h1> 
+       <p>Ihre Kontrolle aus der Region</p>
+    </div>
+    <!-- JavaScript Navbar Animation -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger');
+    const overlay = document.querySelector('.overlay');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Toggle the active class on burger click
+    burger.addEventListener('click', () => {
+        overlay.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close the menu and overlay when clicking on the overlay
+    overlay.addEventListener('click', () => {
+        overlay.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
+    </script>
+
+</body>
+</html>
