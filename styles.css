@@ -8,10 +8,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at top, rgba(10, 112, 82, 0.6), #01271f 80%);
-    background-color: #00271e;
     overflow: hidden;
     flex-direction: column;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Background Animartion */
+    background: linear-gradient(-45deg, #01271f, #024b35, #024e35, #09251c);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Background Gloweffect */
@@ -31,13 +46,20 @@ body {
 /* Homepage Text */
 .maincontent {
     position: relative;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 450px;
     padding-right: 50%;
     text-align: center;
 }
 
-h1 {
+@media (max-width: 800px) {
+    .maincontent {
+        font-size: 160px; 
+        line-height: 0.5;
+        padding: 10px;
+    }
+}
+
+.h1-main {
     font-size: 100px;
     color: white;
     z-index: 2;
@@ -45,9 +67,17 @@ h1 {
     margin: 0;
 }
 
+@media (max-width: 800px) {
+    .h1-main {
+        font-size: 70px; 
+        line-height: 0.5;
+        padding: 10px;
+    }
+}
+
 .gradient-text {
     font-size: 100px;
-    background: -webkit-linear-gradient(0deg, #a0d3c2, #127453);
+    background: -webkit-linear-gradient(0deg, #c1eee3, #0ab67c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: 2;
@@ -57,11 +87,29 @@ h1 {
     
 }
 
-p {
-    font-size: 30px;
+@media (max-width: 850px) {
+    .gradient-text {
+        font-size: 70px; 
+        line-height: 1;
+        padding: 10px;
+    } 
+}
+
+.p-main {
+    font-size: 35px;
     color: white;
     margin: 10px 0 0 0;
 }
+
+@media (max-width: 800px) {
+    .p-main {
+        font-size: 30px; 
+        line-height: 2;
+        padding: 0px;
+    }
+}
+
+
 
 /* NavBar */
 
@@ -132,7 +180,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: black; 
+    background: #01271f; 
     display: none;
     z-index: 998; 
     transition: opacity 0.3s ease-in-out;
