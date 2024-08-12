@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrokontrolle Hemmerling</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Logo</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="service.html">Dienste</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+    <div class="overlay"></div>
+    <!-- JavaScript Navbar Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const burger = document.querySelector('.burger');
+        const overlay = document.querySelector('.overlay');
+        const navLinks = document.querySelector('.nav-links');
+    
+        // Toggle the active class on burger click
+        burger.addEventListener('click', () => {
+            overlay.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    
+        // Close the menu and overlay when clicking on the overlay
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+    
+        </script>
+    <!-- Cards -->
+    <div class="card-container">
+        <div class="card-box">
+          <span></span>
+          <div class="card-content">
+            <h2>kontrolle 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="control-service/control-1">Mehr lesen</a>
+          </div>
+        </div>
+        <div class="card-box">
+          <span></span>
+          <div class="card-content">
+            <h2>kontrolle 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="control-service/control-2">Mehr lesen</a>
+          </div>
+        </div>
+        <div class="card-box">
+          <span></span>
+          <div class="card-content">
+            <h2>kontrolle 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="control-service/control-3">Mehr lesen</a>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

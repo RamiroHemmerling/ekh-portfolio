@@ -28,33 +28,26 @@
         </nav>
     </header>
     <div class="overlay"></div>
-    <!-- Main Content -->
-    <div class="glow"></div>
-    <div class="maincontent">
-       <h1 class="h1-main">Elektrokontrolle <h1 class="gradient-text"> Hemmerling</h1> </h1> 
-       <p class="p-main">Kontrolle aus der Region</p>
-    </div>
     <!-- JavaScript Navbar Animation -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const burger = document.querySelector('.burger');
-    const overlay = document.querySelector('.overlay');
-    const navLinks = document.querySelector('.nav-links');
-
-    // Toggle the active class on burger click
-    burger.addEventListener('click', () => {
-        overlay.classList.toggle('active');
-        navLinks.classList.toggle('active');
+        document.addEventListener('DOMContentLoaded', function() {
+        const burger = document.querySelector('.burger');
+        const overlay = document.querySelector('.overlay');
+        const navLinks = document.querySelector('.nav-links');
+    
+        // Toggle the active class on burger click
+        burger.addEventListener('click', () => {
+            overlay.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    
+        // Close the menu and overlay when clicking on the overlay
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
     });
-
-    // Close the menu and overlay when clicking on the overlay
-    overlay.addEventListener('click', () => {
-        overlay.classList.remove('active');
-        navLinks.classList.remove('active');
-    });
-});
-
-    </script>
-
+    
+        </script>
 </body>
 </html>
