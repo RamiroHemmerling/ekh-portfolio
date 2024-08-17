@@ -1,4 +1,4 @@
-# Elektrokontrolle Hemmerling 
+# Elektrokontrolle Hemmerling ©
 Portfolio for a Startup active in the electrical sector
 
 ## Currently consisting of
